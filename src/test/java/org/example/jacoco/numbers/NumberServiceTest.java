@@ -1,7 +1,10 @@
 package org.example.jacoco.numbers;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class NumberServiceTest {
 
@@ -20,10 +23,10 @@ class NumberServiceTest {
     }
 
     @Test
-    void testMultiply() {
-        assertEquals(6, numberService.multiply(2, 3));
-        assertEquals(0, numberService.multiply(2, 0));
+    void testMultiply_broken() {
+        assertEquals(11, numberService.multiply(2, 6));
     }
+
 
     @Test
     void testDivide() {
